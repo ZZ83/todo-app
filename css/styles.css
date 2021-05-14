@@ -1,5 +1,49 @@
+/*=======================================================
+Base Styles
+=======================================================*/
 *, 
 *:after,
 *:before {
-  box-sizing: border-box;
+  	box-sizing: border-box;
+}
+
+body {
+	font-size: 18px;
+	max-width: 1440px;
+	margin: 0 auto;
+	font-family: 'Josefin Sans', sans-serif;
+	background-color: #171823;
+}
+
+h1 {
+	color: #fff;
+	font-weight: 700;
+}
+
+/*=======================================================
+Header Styles
+=======================================================*/
+.header-wrapper {
+	width: 100%;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-image: url("../images/bg-mobile-dark.jpg");
+}
+	.header {
+		width: 90%;
+		max-width: 540px;
+		height: 200px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+/*=======================================================
+Media Queries
+=======================================================*/
+@media only screen and (min-width: 540px) {
+	.header-wrapper {
+		background-image: url("../images/bg-desktop-dark.jpg");
+	}
 }
