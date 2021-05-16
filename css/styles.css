@@ -20,6 +20,22 @@ h1 {
 	font-weight: 700;
 }
 
+main {
+	width: 85%;
+	margin: 0 auto;
+}
+
+/*=======================================================
+Helper Styles
+=======================================================*/
+.inner {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
 /*=======================================================
 Background Image Styles
 =======================================================*/
@@ -53,6 +69,32 @@ Header Styles
 	}
 
 /*=======================================================
+Add Todo Styles
+=======================================================*/
+.add-item {
+	margin: 0 auto;
+	max-width: 540px;
+	border-radius: 10px;
+	background-color: #25273d;
+}
+	.add-item__text {
+		width: 80%;
+		border: 0;
+		outline: 0;
+		color: #fff;
+		height: 50px;
+		font-size: 1rem;
+		background-color: transparent;
+	} 
+	.add-item__text::placeholder {
+		color: #767992;
+		font-size: 1rem;
+	}
+	.add-item__button {
+		fill: #767992;
+	}
+
+/*=======================================================
 Media Queries
 =======================================================*/
 @media only screen and (min-width: 540px) {
@@ -61,7 +103,7 @@ Media Queries
 	}
 
 	.background-image {
-		height: 225px;
+		height: 275px;
 		background-image: url("../images/bg-desktop-dark.jpg");
 	}
 
@@ -69,10 +111,8 @@ Media Queries
 		font-size: 2.479rem;
 		letter-spacing: 10px;
 	}
-}
 
-@media only screen and (min-width: 940px) {
-	.background-image {
-		height: 300px;
-	}
+	.add-item__text {
+		height: 60px;
+	} 
 }
