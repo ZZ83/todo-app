@@ -1,3 +1,8 @@
+.background-image, .wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -337,6 +342,14 @@ template {
   display: none;
 }
 
+:root {
+  --dark-bg-color: #161722;
+  --dark-items-bg-color: #25273c;
+  --dark-text-color: #cacde8;
+  --dark-placeholder-text:#777a92;
+  --dark-complete-text: #4d5066;
+}
+
 /*=======================================================
 Base Styles
 =======================================================*/
@@ -348,10 +361,8 @@ Base Styles
 
 body {
   font-size: 13px;
-  margin: 0 auto;
-  max-width: 1440px;
   font-family: "Josefin Sans", sans-serif;
-  background-color: #171823;
+  background-color: var(--dark-bg-color);
 }
 
 h1 {
@@ -367,6 +378,10 @@ main {
 /*=======================================================
 Helper Styles
 =======================================================*/
+.wrapper {
+  max-width: 1440px;
+}
+
 .inner {
   width: 90%;
   margin: 0 auto;
@@ -383,13 +398,9 @@ Media Queries
     font-size: 18px;
   }
 }
-/*=======================================================
-Background Image Styles
-=======================================================*/
 .background-image {
   width: 100%;
   height: 200px;
-  margin: 0 auto;
   z-index: -1;
   max-width: 1440px;
   position: absolute;
@@ -404,9 +415,6 @@ Background Image Styles
     background-image: url("../images/bg-desktop-dark.jpg");
   }
 }
-/*=======================================================
-Header Styles
-=======================================================*/
 .header {
   width: 85%;
   max-width: 540px;
@@ -416,44 +424,37 @@ Header Styles
   align-items: center;
   justify-content: space-between;
 }
-
 .header__logo {
   font-size: 1.68rem;
   letter-spacing: 10px;
 }
-
 @media only screen and (min-width: 540px) {
   .header__logo {
     font-size: 2.479rem;
     letter-spacing: 10px;
   }
 }
-/*=======================================================
-Add Todo Styles
-=======================================================*/
-.add-item {
+
+.create-todo {
   margin: 0 auto;
   max-width: 540px;
   border-radius: 10px;
-  background-color: #25273d;
+  background-color: var(--dark-items-bg-color);
 }
-
-.add-item__text {
+.create-todo__text {
   width: 80%;
   border: 0;
   outline: 0;
-  color: #fff;
+  color: var(--dark-text-color);
   height: 50px;
   font-size: 1rem;
   background-color: transparent;
 }
-
-.add-item__text::placeholder {
-  color: #767992;
+.create-todo__text::placeholder {
+  color: var(--dark-placeholder-text);
   font-size: 1rem;
 }
-
-.add-item__button {
+.create-todo__button {
   fill: #767992;
 }
 
