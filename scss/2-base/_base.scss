@@ -27,6 +27,9 @@ body {
 	font-size: 13px;
 	font-family: 'Josefin Sans', sans-serif;
 	background-color: var(--dark-bg-color);
+	@media only screen and (min-width: 540px) {
+		font-size: 18px;
+	}
 }
 
 h1 {
@@ -35,8 +38,27 @@ h1 {
 }
 
 main {
-	width: 85%;
-	margin: 0 auto;
+	@extend %center;
+	@extend %width90;
+}
+
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+ul > :first-child {
+	border-radius: 10px 10px 0 0;
+}
+
+ul > :last-child {
+	border-radius: 0 0 10px 10px;
+}
+
+
+
+li:not(:last-of-type)  {
+	border-bottom: 1px solid #393a4c;
 }
 
 /*=======================================================
@@ -48,18 +70,7 @@ Helper Styles
 }
 
 .inner {
-	width: 90%;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-/*=======================================================
-Media Queries
-=======================================================*/
-@media only screen and (min-width: 540px) {
-	body {
-		font-size: 18px;
-	}
+	width: 92%;
+	@extend %center;
+	@extend %flex-ai-jc;
 }

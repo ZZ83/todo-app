@@ -1,8 +1,8 @@
 .create-todo {
-	margin: 0 auto;
 	max-width: 540px;
 	border-radius: 10px;
 	background-color: var(--dark-items-bg-color);
+    @extend %center;
 	&__text {
 		width: 80%;
 		border: 0;
@@ -13,12 +13,13 @@
 		background-color: transparent;
 	}
 	&__text::placeholder {
-		color: var(--dark-placeholder-text);
 		font-size: 1rem;
+		color: var(--dark-placeholder-text);
 	}
 	&__button {
-		fill: #767992;
+		fill: var(--dark-complete-text);
 	}
 }
-	
+
+
 	

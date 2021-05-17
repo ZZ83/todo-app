@@ -1,11 +1,9 @@
 .header {
-	width: 85%;
 	max-width: 540px;
-	margin: 0 auto;
 	padding-top: 2.5em;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	@extend %width90;
+	@extend %center;
+	@extend %flex-ai-jc;
 	&__logo {
 		font-size: 1.68rem;
 		letter-spacing: 10px;
