@@ -1,14 +1,12 @@
 .create-todo {
-	max-width: 540px;
 	border-radius: 10px;
-	background-color: var(--dark-items-bg-color);
-    @extend %center;
+    @extend %items;
 	&__text {
 		width: 80%;
 		border: 0;
 		outline: 0;
 		color: var(--dark-text-color);
-		height: 50px;
+		height: 60px;
 		font-size: 1rem;
 		background-color: transparent;
 	}

@@ -1,8 +1,3 @@
-@mixin reset {
-    margin-left:  auto;
-    margin-right: auto;
-}
-
 %center {
     margin-left:  auto;
     margin-right: auto;
@@ -22,4 +17,14 @@
 
 %width90 {
     width: 90%;
+}
+
+%max-width-540 {
+    max-width: 540px;
+}
+
+%items {
+    @extend %center;
+    @extend %max-width-540;
+    background-color: var(--dark-items-bg-color);
 }

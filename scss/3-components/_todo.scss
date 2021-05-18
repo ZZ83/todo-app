@@ -1,21 +1,32 @@
 .todo {
-	height: 50px;
-	// border-bottom: 1px solid gray;
-    
-	background-color: var(--dark-items-bg-color);
     display: flex;
+	height: 60px;
+	@extend %items;
     &-inner {
         width: 92%;
         display: flex;
         align-items: center;
         @extend %center;
+        &:hover {
+            cursor: pointer;
+        }
     }
     &__checkbox {
-        width:  24px;
-        height: 24px;
-        border: 2px solid var(--dark-complete-text);
-        border-radius: 50%;
+        width:  26px;
+        height: 26px;
         margin-right: 10px;
+        border-radius: 50%;
+        border: 2px solid var(--dark-complete-text);
+        justify-content: center;
+        @extend %flex-ai-c;
+        // background: linear-gradient(to bottom right, #55DDFF, #c058f3); // will maybe be applied in javascript with a class
+        &:hover {
+            cursor: pointer;
+            border: double 2px transparent;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(var(--dark-items-bg-color), var(--dark-items-bg-color)), radial-gradient(circle at top left, #55DDFF,#c058f3);
+        }
     }
     &__text {
         width: 78%;
@@ -34,5 +45,38 @@
 	}
     &__icon {
         margin-left: auto;
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
+
+
+.x {
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+
+.sort {
+    width: 90%;
+    left: 0;
+    right: 0;
+    padding: 0 3em;
+    border-radius: 10px;
+    @extend %center;
+    @extend %max-width-540;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    margin-top: 12em;
+    background-color: darkgray;
+    @media only screen and (min-width: 540px) {
+        position: initial;
+        background-color: transparent;
+        margin-top: 0;
+        width: 35%;
+        padding: 0;
+    }
+}
+

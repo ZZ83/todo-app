@@ -24,6 +24,7 @@ Base Styles
 }
 
 body {
+	margin-bottom: 10em;
 	font-size: 13px;
 	font-family: 'Josefin Sans', sans-serif;
 	background-color: var(--dark-bg-color);
@@ -54,8 +55,6 @@ ul > :first-child {
 ul > :last-child {
 	border-radius: 0 0 10px 10px;
 }
-
-
 
 li:not(:last-of-type)  {
 	border-bottom: 1px solid #393a4c;

@@ -1,7 +1,7 @@
 .header {
-	max-width: 540px;
 	padding-top: 2.5em;
 	@extend %width90;
+	@extend %max-width-540;
 	@extend %center;
 	@extend %flex-ai-jc;
 	&__logo {
