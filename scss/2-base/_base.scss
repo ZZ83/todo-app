@@ -38,6 +38,16 @@ h1 {
 	font-weight: 700;
 }
 
+h5 {
+	font-size: 1rem;
+	margin-top: 7.5em;
+	text-align: center;
+	color: var(--dark-complete-text);
+	@media only screen and (min-width: 540px) {
+		margin-top: 3em;
+	}
+}
+
 main {
 	@extend %center;
 	@extend %width90;

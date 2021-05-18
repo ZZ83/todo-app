@@ -1,0 +1,40 @@
+.tracker {
+    font-size: 14px;
+    justify-content: space-between;
+    color: var(--dark-complete-text);
+    &__items-left:hover,
+    &__clear-items:hover {
+        color: var(--dark-text-color);
+    }
+}
+
+.sort {
+    left:  0;
+    right: 0;
+    width: 90%;
+    padding: 0 1em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    margin-top: 12em;
+    @extend %items;
+    @media only screen and (min-width: 540px) {
+        position: initial;
+        background-color: transparent;
+        margin-top: 0;
+        width: 40%;
+        padding: 0;
+    }
+    &__items {
+        &:hover {
+            color: var(--dark-text-color);
+        } 
+    }
+}
+
+.sort-inner {
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+}
