@@ -23,7 +23,7 @@
 }
 
 .sort, .todo, .create-todo {
-  background-color: var(--dark-items-bg-color);
+  background-color: var(--items-bg-color);
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -366,11 +366,11 @@ template {
 }
 
 :root {
-  --dark-bg-color: #161722;
-  --dark-items-bg-color: #25273c;
-  --dark-text-color: #cacde8;
-  --dark-placeholder-text:#777a92;
-  --dark-complete-text: #4d5066;
+  --bg-color: #161722;
+  --items-bg-color: #25273c;
+  --primary-text-color: #cacde8;
+  --placeholder-text: #777a92;
+  --accent-color: #4d5066;
 }
 
 /*=======================================================
@@ -386,7 +386,7 @@ body {
   margin-bottom: 10em;
   font-size: 13px;
   font-family: "Josefin Sans", sans-serif;
-  background-color: var(--dark-bg-color);
+  background-color: var(--bg-color);
 }
 @media only screen and (min-width: 540px) {
   body {
@@ -403,7 +403,7 @@ h5 {
   font-size: 1rem;
   margin-top: 7.5em;
   text-align: center;
-  color: var(--dark-complete-text);
+  color: var(--accent-color);
 }
 @media only screen and (min-width: 540px) {
   h5 {
@@ -437,6 +437,10 @@ Helper Styles
 
 .inner {
   width: 92%;
+}
+
+.active {
+  color: #3A7CFD;
 }
 
 .background-image {
@@ -477,17 +481,18 @@ Helper Styles
   width: 80%;
   border: 0;
   outline: 0;
-  color: var(--dark-text-color);
+  color: var(--primary-text-color);
   height: 60px;
   font-size: 1rem;
   background-color: transparent;
 }
 .create-todo__text::placeholder {
   font-size: 1rem;
-  color: var(--dark-placeholder-text);
+  color: var(--placeholder-text);
 }
 .create-todo__button {
-  fill: var(--dark-complete-text);
+  cursor: pointer;
+  fill: var(--accent-color);
 }
 
 .todo {
@@ -507,7 +512,7 @@ Helper Styles
   height: 26px;
   margin-right: 10px;
   border-radius: 50%;
-  border: 2px solid var(--dark-complete-text);
+  border: 2px solid var(--accent-color);
   justify-content: center;
 }
 .todo__checkbox:hover {
@@ -515,13 +520,13 @@ Helper Styles
   border: double 2px transparent;
   background-origin: border-box;
   background-clip: content-box, border-box;
-  background-image: linear-gradient(var(--dark-items-bg-color), var(--dark-items-bg-color)), radial-gradient(circle at top left, #55DDFF, #c058f3);
+  background-image: linear-gradient(var(--items-bg-color), var(--items-bg-color)), radial-gradient(circle at top left, #55DDFF, #c058f3);
 }
 .todo__text {
   width: 78%;
   margin-top: 19px;
   font-size: 1rem;
-  color: var(--dark-text-color);
+  color: var(--primary-text-color);
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -546,10 +551,10 @@ Helper Styles
 .tracker {
   font-size: 14px;
   justify-content: space-between;
-  color: var(--dark-complete-text);
+  color: var(--accent-color);
 }
 .tracker__items-left:hover, .tracker__clear-items:hover {
-  color: var(--dark-text-color);
+  color: var(--primary-text-color);
 }
 
 .sort {
@@ -573,7 +578,7 @@ Helper Styles
   }
 }
 .sort__items:hover {
-  color: var(--dark-text-color);
+  color: var(--primary-text-color);
 }
 
 .sort-inner {

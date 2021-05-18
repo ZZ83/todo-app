@@ -1,10 +1,10 @@
 .tracker {
     font-size: 14px;
     justify-content: space-between;
-    color: var(--dark-complete-text);
+    color: var(--accent-color);
     &__items-left:hover,
     &__clear-items:hover {
-        color: var(--dark-text-color);
+        color: var(--primary-text-color);
     }
 }
 
@@ -28,7 +28,7 @@
     }
     &__items {
         &:hover {
-            color: var(--dark-text-color);
+            color: var(--primary-text-color);
         } 
     }
 }

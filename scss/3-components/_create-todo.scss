@@ -5,17 +5,18 @@
 		width: 80%;
 		border: 0;
 		outline: 0;
-		color: var(--dark-text-color);
+		color: var(--primary-text-color);
 		height: 60px;
 		font-size: 1rem;
 		background-color: transparent;
 	}
 	&__text::placeholder {
 		font-size: 1rem;
-		color: var(--dark-placeholder-text);
+		color: var(--placeholder-text);
 	}
 	&__button {
-		fill: var(--dark-complete-text);
+		cursor: pointer;
+		fill: var(--accent-color);
 	}
 }
 

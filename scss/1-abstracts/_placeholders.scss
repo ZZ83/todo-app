@@ -14,7 +14,6 @@
     align-items: center;
 }
 
-
 %width90 {
     width: 90%;
 }
@@ -26,5 +25,5 @@
 %items {
     @extend %center;
     @extend %max-width-540;
-    background-color: var(--dark-items-bg-color);
+    background-color: var(--items-bg-color);
 }
