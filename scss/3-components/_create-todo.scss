@@ -12,11 +12,11 @@
 	}
 	&__text::placeholder {
 		font-size: 1rem;
-		color: var(--placeholder-text);
+		color: var(--secondary-text-color);
 	}
 	&__button {
 		cursor: pointer;
-		fill: var(--accent-color);
+		fill: var(--secondary-text-color);
 	}
 }
 

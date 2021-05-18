@@ -7,11 +7,17 @@
 // Very Dark Grayish Blue:     #393a4c
 
 :root {
-	--bg-color:           #161722;
-	--items-bg-color:     #25273c;
-	--primary-text-color: #cacde8;
-	--placeholder-text:   #777a92;
-	--accent-color:       #4d5066;
+	--bg-color:            #161722;
+	--items-bg-color:      #25273c;
+	--primary-text-color:  #cacde8;
+	--secondary-text-color:#777a92;
+	--accent-color:        #494C6B;
+
+	// --bg-color:             #FAFAFA;
+	// --items-bg-color:       #FFFFFF;
+	// --primary-text-color:   #494C6B;
+	// --secondary-text-color: #9495A5;
+	// --accent-color:         #E3E4F1;
 }
 
 /*=======================================================
@@ -42,7 +48,7 @@ h5 {
 	font-size: 1rem;
 	margin-top: 7.5em;
 	text-align: center;
-	color: var(--accent-color);
+	color: var(--secondary-text-color);
 	@media only screen and (min-width: 540px) {
 		margin-top: 3em;
 	}
@@ -67,7 +73,7 @@ ul > :last-child {
 }
 
 li:not(:last-of-type)  {
-	border-bottom: 1px solid #393a4c;
+	border-bottom: 1px solid var(--accent-color);
 }
 
 /*=======================================================
