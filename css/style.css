@@ -443,6 +443,12 @@ Helper Styles
   color: #3A7CFD;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .background-image {
   width: 100%;
   height: 200px;
