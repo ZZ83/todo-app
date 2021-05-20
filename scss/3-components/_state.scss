@@ -1,0 +1,12 @@
+.bb {
+    border: none;
+    background: linear-gradient(to bottom right, #55DDFF, #c058f3);
+}
+
+.hover {
+    cursor: pointer;
+    border: double 2px transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-image: linear-gradient(var(--items-bg-color), var(--items-bg-color)), radial-gradient(circle at top left, #55DDFF,#c058f3);
+}
