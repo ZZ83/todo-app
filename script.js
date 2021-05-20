@@ -58,7 +58,9 @@
 //     });
 // }
 
-
+const removeItem = element => {
+   element.parentNode.parentNode.remove();
+}
 
 const addItem = () => {
     const li           = document.createElement("li");
@@ -76,6 +78,10 @@ const addItem = () => {
     button.innerHTML       = `<svg class="todo__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>`;
     
     todoText.innerHTML = input.value;
+
+    button.addEventListener("click", () => {
+        removeItem(button);
+    })
     
     li.appendChild(todoInner);
     todoInner.appendChild(todoCheckbox);
@@ -95,45 +101,47 @@ const ul    = document.querySelector("ul");
 input.addEventListener("keyup", function(event) {
     if (event.code === 'Enter') {
         addItem();
-        
-    
-        
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // let todoItem = `
-        //     <li class="todo">
-        //         <div class="todo-inner">
-        //             <div class="todo__checkbox"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg></div>
-        //             <p   class="todo__text">${input.value}</p>
-        //             <svg class="todo__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
-        //         </div>
-        //     </li>
-        // `
-        // ul.insertAdjacentHTML("afterbegin", todoItem);
-        // input.value = "";
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // const checkboxes = document.querySelectorAll(".todo__checkbox");
 // checkboxes.forEach( checkbox => {
@@ -167,3 +175,16 @@ input.addEventListener("keyup", function(event) {
         //     closePath.setAttribute("fill-rule", "evenodd");
         //     closePath.setAttribute("d", "M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z");
         // todoClose.appendChild(closePath);
+
+
+          // let todoItem = `
+        //     <li class="todo">
+        //         <div class="todo-inner">
+        //             <div class="todo__checkbox"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg></div>
+        //             <p   class="todo__text">${input.value}</p>
+        //             <svg class="todo__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"/></svg>
+        //         </div>
+        //     </li>
+        // `
+        // ul.insertAdjacentHTML("afterbegin", todoItem);
+        // input.value = "";
