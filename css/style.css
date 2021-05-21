@@ -365,6 +365,9 @@ template {
   display: none;
 }
 
+/*=======================================================
+Variables
+=======================================================*/
 :root {
   --bg-color: #161722;
   --items-bg-color: #25273c;
@@ -593,9 +596,14 @@ button {
   width: 250px;
 }
 
-.bb {
+.checkbox {
   border: none;
   background: linear-gradient(to bottom right, #55DDFF, #c058f3);
+}
+
+.scratch {
+  color: var(--accent-color);
+  text-decoration: line-through;
 }
 
 .hover {

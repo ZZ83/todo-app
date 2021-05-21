@@ -1,6 +1,11 @@
-.bb {
+.checkbox {
     border: none;
     background: linear-gradient(to bottom right, #55DDFF, #c058f3);
+}
+
+.scratch {
+    color: var(--accent-color);
+    text-decoration: line-through;
 }
 
 .hover {
