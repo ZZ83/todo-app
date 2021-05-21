@@ -54,6 +54,22 @@ const toggleCheck = element => {
     element.style.display === "" ? element.style.display = "block" : element.style.display = "";
 }
 
+
+
+document.querySelector(".tracker__clear-items").addEventListener("click", () => {
+    clearCompleted();
+})
+const clearCompleted = () => {
+    const li= document.querySelectorAll("li");
+    li.forEach(element => {
+        if( element.firstElementChild.firstElementChild.classList.contains("checkbox") ) {
+            element.remove()
+        }
+    });
+}
+
+
+
 const addItem = () => {
 
     // Create elements
