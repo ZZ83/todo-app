@@ -11,7 +11,6 @@ export default {
     itemsLeft()  {
         const items = document.querySelector(".tracker__items-left");
         const li = document.querySelectorAll("li");
-        console.log(li.length)
         items.innerHTML = `${li.length - 1} Items Left`;
     },
     clearCompleted() {

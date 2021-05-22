@@ -1,4 +1,4 @@
-import test from './helpers.js';
+import helper from './helpers.js';
 
 export function addItem(ul, input) {
     // Create elements
@@ -23,14 +23,15 @@ export function addItem(ul, input) {
 
     // Removes todo item
     button.addEventListener("click", () => {
-        test.removeItem(button);
+        helper.removeItem(button);
+        helper.itemsLeft();
     })
 
     // toggles todo item completed state
     todoCheckbox.addEventListener("click", () => {
-        test.toggleClass(todoCheckbox,"checkbox");
-        test.toggleCheck(todoCheckbox.firstElementChild);
-        test.toggleClass(todoCheckbox.parentElement.children[1], "scratch");
+        helper.toggleClass(todoCheckbox,"checkbox");
+        helper.toggleCheck(todoCheckbox.firstElementChild);
+        helper.toggleClass(todoCheckbox.parentElement.children[1], "scratch");
     })
 
     // Add elements to DOM

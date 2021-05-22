@@ -1,14 +1,12 @@
 import {changeTheme} from './modules/theme.js';
 import {addItem}     from './modules/add-items.js';
-import test          from './modules/helpers.js';
+import helper        from './modules/helpers.js';
 
 const ul         = document.querySelector("ul");
 const input      = document.querySelector(".create-todo__text");
 const button     = document.querySelector("button");
+const addButton  = document.querySelector(".create-todo__button");
 const clearItems = document.querySelector(".tracker__clear-items");
-
-
-
 
 button.addEventListener("click", () => {
     changeTheme(button);
@@ -17,12 +15,21 @@ button.addEventListener("click", () => {
 input.addEventListener("keyup", function(event) {
     if (event.code === 'Enter') {
         addItem(ul, input);
+        helper.itemsLeft();
     }
 });
 
+addButton.addEventListener("click", function(event) {
+    addItem(ul, input);
+    helper.itemsLeft();
+});
+
 clearItems.addEventListener("click", () => {
-    test.clearCompleted();
+    helper.clearCompleted();
+    helper.itemsLeft();
 })
+
+
 
 
 
