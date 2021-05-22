@@ -20,6 +20,15 @@ export default {
                 element.remove()
             }
         });
+    },
+    removeActiveClass() {
+        const sortItems = document.querySelectorAll(".sort__items");
+        sortItems.forEach(item => {
+            item.classList.remove("active");
+        })
+    },
+    addActiveClass(element) {
+        element.classList.add("active");
     }
 }
 
