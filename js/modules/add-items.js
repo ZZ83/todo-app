@@ -21,6 +21,9 @@ export function addItem(ul, input) {
     // Set todo items text
     todoText.innerHTML = input.value;
 
+    // Set remove to button label
+    button.setAttribute("aria-label", "Remove todo item");
+
     // Removes todo item
     button.addEventListener("click", () => {
         helper.removeItem(button);
