@@ -29,7 +29,17 @@ export default {
     },
     addActiveClass(element) {
         element.classList.add("active");
-    }
+    },
+    hover(element) {
+        element.addEventListener( "mouseover", () => {
+            if( !element.classList.contains("checkbox") ) {
+                element.classList.add("hover")
+            } 
+        });
+        element.addEventListener( "mouseout",  () => {
+            element.classList.remove("hover") 
+        });
+    },
 }
 
 

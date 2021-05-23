@@ -27,6 +27,9 @@ export function addItem(ul, input) {
         helper.itemsLeft();
     })
 
+    // Adds hover state
+    helper.hover(todoCheckbox);
+
     // toggles todo item completed state
     todoCheckbox.addEventListener("click", () => {
         helper.toggleClass(todoCheckbox,"checkbox");
