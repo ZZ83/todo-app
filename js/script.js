@@ -24,14 +24,18 @@ clearItems.addEventListener("click", () => {
 })
 
 addButton.addEventListener("click", function() {
-    addItem(ul, input);
-    helper.itemsLeft();
+    if(input.value) {
+        addItem(ul, input);
+        helper.itemsLeft();
+    }
 });
 
 input.addEventListener("keyup", function(event) {
-    if (event.code === 'Enter') {
-        addItem(ul, input);
-        helper.itemsLeft();
+    if(input.value) {
+        if (event.code === 'Enter') {
+            addItem(ul, input);
+            helper.itemsLeft();
+        }
     }
 });
 
