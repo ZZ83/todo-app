@@ -58,9 +58,8 @@ export function dragDrop() {
         draggedElement.style.backgroundColor = "";
     }, false);
 
-    document.addEventListener("dragend", function( event ) {
+    document.addEventListener("dragend", function() {
         // reset the transparency
         draggedElement.style.opacity = "";
-        
     }, false);
 }
