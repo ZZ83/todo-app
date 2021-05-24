@@ -2,6 +2,7 @@
     display: flex;
 	height: 60px;
 	@extend %items;
+  
     &-inner {
         width: 92%;
         display: flex;

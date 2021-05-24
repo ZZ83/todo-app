@@ -614,4 +614,8 @@ button {
   background-image: linear-gradient(var(--items-bg-color), var(--items-bg-color)), radial-gradient(circle at top left, #55DDFF, #c058f3);
 }
 
+.over {
+  background-color: #fff;
+}
+
 /*# sourceMappingURL=style.css.map */
