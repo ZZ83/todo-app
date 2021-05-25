@@ -374,6 +374,8 @@ Variables
   --primary-text-color: #cacde8;
   --secondary-text-color:#777a92;
   --accent-color: #494C6B;
+  --mobile-bg: url("../images/bg-mobile-dark.jpg");
+  --desktop-bg: url("../images/bg-desktop-dark.jpg");
 }
 
 /*=======================================================
@@ -460,13 +462,13 @@ button {
   position: absolute;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-image: url("../images/bg-mobile-dark.jpg");
+  background-image: var(--mobile-bg);
 }
 
 @media only screen and (min-width: 540px) {
   .background-image {
     height: 275px;
-    background-image: url("../images/bg-desktop-dark.jpg");
+    background-image: var(--desktop-bg);
   }
 }
 .header {

@@ -8,6 +8,8 @@ const dark = {
     "--primary-text-color":   `#cacde8`,
     "--secondary-text-color": `#777a92`,
     "--accent-color":         `#494C6B`,
+    "--mobile-bg":  `url("../images/bg-mobile-dark.jpg")`,
+    "--desktop-bg": `url("../images/bg-desktop-dark.jpg")`,
 };
 
 const light = {
@@ -16,6 +18,8 @@ const light = {
     "--primary-text-color":   `#494C6B`,
     "--secondary-text-color": `#9495A5`,
     "--accent-color":         `#E3E4F1`,
+    "--mobile-bg":  `url("../images/bg-mobile-light.jpg")`,
+    "--desktop-bg": `url("../images/bg-desktop-light.jpg")`,
 };
 
 function changeThemeTo(theme) {
